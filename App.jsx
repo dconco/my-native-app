@@ -1,12 +1,16 @@
+import React, { useState } from 'react'
 import {
    SafeAreaView,
    FlatList,
    StyleSheet,
    StatusBar,
-   Alert,
+   Alert
 } from 'react-native'
-import React, { useState } from 'react'
-import { ItemText, ItemView, StyledButton } from './styles/App.style';
+import {
+   ItemText,
+   ItemView,
+   StyledButton
+} from './styles/App.style';
 
 
 const App = () => {
@@ -37,7 +41,7 @@ const App = () => {
     * @param {Object} props - The component props.
     * @param {string} props.title - The title of the item.
     * @returns {JSX.Element} The rendered Item component.
-    */
+   */
    return (
       <SafeAreaView style={styles.container}>
          <FlatList data={dataList} renderItem={({ item }) => <Item title={item.title} />} keyExtractor={Math.random} />
