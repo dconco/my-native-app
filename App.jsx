@@ -1,15 +1,12 @@
 import {
    SafeAreaView,
-   View,
    FlatList,
    StyleSheet,
-   Text,
    StatusBar,
    Alert,
-   Button,
 } from 'react-native'
 import React, { useState } from 'react'
-import { ItemText, ItemView } from './styles/App.style';
+import { ItemText, ItemView, StyledButton } from './styles/App.style';
 
 
 const App = () => {
@@ -27,19 +24,26 @@ const App = () => {
    ]
 
    const Item = ({ title }) => (
-      <ItemView style={styles.item}>
-         <ItemText style={styles.title}>{title}</ItemText>
+      <ItemView>
+         <ItemText key={title}>{title}</ItemText>
       </ItemView>
    )
 
 
-   // return JSX
+   /**
+    * Renders an item with a title.
+    *
+    * @component
+    * @param {Object} props - The component props.
+    * @param {string} props.title - The title of the item.
+    * @returns {JSX.Element} The rendered Item component.
+    */
    return (
       <SafeAreaView style={styles.container}>
          <FlatList data={dataList} renderItem={({ item }) => <Item title={item.title} />} keyExtractor={Math.random} />
          <StatusBar backgroundColor='lightblue' barStyle='dark-content' />
 
-         <Button title='Button Element' color={'red'} onPress={buttonClickFunc} />
+         <StyledButton title='Button Element' onPress={buttonClickFunc} />
       </SafeAreaView>
    )
 }
@@ -48,12 +52,6 @@ const styles = StyleSheet.create({
    container: {
       flex: 1,
       backgroundColor: 'lightblue'
-   },
-   item: {
-
-   },
-   title: {
-      fontSize: 32,
    },
 })
 
