@@ -1,10 +1,8 @@
 import React, { useState } from 'react'
 import { StatusBar } from 'react-native'
+import type { StatusBarStyle, StatusBarAnimation } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
-
-import type { StatusBarStyle } from 'react-native';
-import type { StatusBarAnimation } from 'react-native';
-import { StatusThemeStyles, StatusThemeAnim } from './components/types';
+import { StatusThemeStyles, StatusThemeAnim } from './src/presentation/components/types.component';
 
 
 const App: React.FC = () => {
