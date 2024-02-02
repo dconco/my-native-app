@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import { StatusBar } from 'react-native'
 import type { StatusBarStyle, StatusBarAnimation } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
-import { StatusThemeStyles, StatusThemeAnim } from './src/presentation/components/types.component';
+import { StatusThemeStyles, StatusThemeAnim } from './src/presentation/components/types/types.component';
 
 
 const App: React.FC = () => {
