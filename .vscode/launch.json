@@ -5,17 +5,10 @@
 	"version": "0.2.0",
 	"configurations": [
 		{
-			"name": "Debug Android",
-			"cwd": "${workspaceFolder}",
-			"type": "reactnative",
+			"command": "npm start",
+			"name": "Run npm start",
 			"request": "launch",
-			"platform": "android"
-		},
-		{
-			"name": "Attach to packager",
-			"cwd": "${workspaceFolder}",
-			"type": "reactnative",
-			"request": "attach"
+			"type": "node-terminal"
 		}
 	]
 }
