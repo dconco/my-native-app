@@ -1,8 +1,5 @@
-import React from "react"
-import Navigation from "./Navigation"
+import React from 'react'
+import Navigation from './Navigation'
 
-const App: React.FC = () => {
-	return <Navigation />
-}
-
+const App: React.FC = () => <Navigation />
 export default App

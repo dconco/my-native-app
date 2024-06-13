@@ -1,5 +1,5 @@
-import React from "react"
-import { Button, SafeAreaView, StyleSheet, Text, View } from "react-native"
+import React from 'react'
+import { Button, SafeAreaView, StyleSheet, Text, View } from 'react-native'
 
 const LoginScreen: React.FC = () => {
 	return (
@@ -8,12 +8,11 @@ const LoginScreen: React.FC = () => {
 				<Text children={'Login to Social Media App'} style={styles.topText} />
 			</View>
 			<View style={styles.button}>
-				<Button title="Go Back" />
+				<Button title='Go Back' />
 			</View>
 		</SafeAreaView>
 	)
 }
-
 
 // STYLES
 const styles = StyleSheet.create({
@@ -25,7 +24,7 @@ const styles = StyleSheet.create({
 	topStyle: {
 		flex: 1,
 		paddingHorizontal: 6,
-		justifyContent: 'center'
+		justifyContent: 'center',
 	},
 	topText: {
 		fontSize: 30,
@@ -36,9 +35,8 @@ const styles = StyleSheet.create({
 	},
 	button: {
 		gap: 10,
-		padding: 10
-	}
+		padding: 10,
+	},
 })
-
 
 export default LoginScreen

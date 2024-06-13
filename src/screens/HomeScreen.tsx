@@ -1,28 +1,39 @@
-import { useNavigation } from "@react-navigation/native"
-import React, { useLayoutEffect } from "react"
-import { Button, SafeAreaView, StyleSheet, Text, View } from "react-native"
+import { ThemeProvider, useNavigation } from '@react-navigation/native'
+import React, { useEffect } from 'react'
+import {
+	Alert,
+	Button,
+	SafeAreaView,
+	StatusBar,
+	type StatusBarAnimation,
+	StyleSheet,
+	Text,
+	View,
+} from 'react-native'
 
-
-export default function HomeScreen() {
+export default function HomeScreen () {
 	const { navigate } = useNavigation()
-
-	useLayoutEffect(() => {
-		navigate('dd')
-	}, [])
+	StatusBar.setBarStyle('dark-content')
 
 	return (
-		<SafeAreaView style={styles.container}>
-			<View style={styles.topStyle}>
-				<Text children={'Welcome to Social Media App'} style={styles.topText} />
-			</View>
-			<View style={styles.button}>
-				<Button title='Login' onPress={() => navigate('home')} />
-				<Button title='Register' />
-			</View>
-		</SafeAreaView>
+		<>
+			<StatusBar animated={true} backgroundColor={'lightblue'} />
+
+			<SafeAreaView style={styles.container}>
+				<View style={styles.topStyle}>
+					<Text
+						children={'Welcome to Social Media App'}
+						style={styles.topText}
+					/>
+				</View>
+				<View style={styles.button}>
+					<Button title='Login' />
+					<Button title='Register' />
+				</View>
+			</SafeAreaView>
+		</>
 	)
 }
-
 
 // STYLES
 const styles = StyleSheet.create({
@@ -34,7 +45,7 @@ const styles = StyleSheet.create({
 	topStyle: {
 		flex: 1,
 		paddingHorizontal: 6,
-		justifyContent: 'center'
+		justifyContent: 'center',
 	},
 	topText: {
 		fontSize: 30,
@@ -45,6 +56,6 @@ const styles = StyleSheet.create({
 	},
 	button: {
 		gap: 10,
-		padding: 10
-	}
+		padding: 10,
+	},
 })
